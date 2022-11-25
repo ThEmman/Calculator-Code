@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Market Calculator</title>
+    <link rel="stylesheet" href="basicCalc.css" />
+  </head>
+  <body>
+    <header>
+      <h1>A Basic Calculator</h1>
+      <div id="demo"></div>
+    </header>
+    <main>
+      <div class="CalcContainer">
+        <div id="screen"><span>0</span></div>
+        <div class="numbersContainer">
+          <div class="calcValues"><button class="numBtn" id="0">0</button></div>
+          <div class="calcValues"><button class="numBtn" id="1">1</button></div>
+          <div class="calcValues"><button class="numBtn" id="2">2</button></div>
+          <div class="calcValues"><button class="numBtn" id="3">3</button></div>
+          <div class="calcValues"><button class="numBtn" id="4">4</button></div>
+          <div class="calcValues"><button class="numBtn" id="5">5</button></div>
+          <div class="calcValues"><button class="numBtn" id="6">6</button></div>
+          <div class="calcValues"><button class="numBtn" id="7">7</button></div>
+          <div class="calcValues"><button class="numBtn" id="8">8</button></div>
+          <div class="calcValues">
+            <button class="numBtn" id="."><b>.</b></button>
+          </div>
+          <div class="calcValues"><button class="numBtn" id="9">9</button></div>
+          <div class="calcValues">
+            <button id="clear" onclick="clearButton()"><b>C</b></button>
+          </div>
+        </div>
+        <div class="operatorContainer">
+          <div class="calcValues"><button class="opBtn">+</button></div>
+          <div class="calcValues"><button class="opBtn">-</button></div>
+          <div class="calcValues"><button class="opBtn">*</button></div>
+          <div class="calcValues"><button class="opBtn">/</button></div>
+          <div class="calcValues" id="equalsButton">
+            <button class="opBtn">=</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="basic calculator.js"></script>
+    <script>
+      setInterval(myFunction, 1000);
+
+      function myFunction() {
+        let d = new Date();
+        document.getElementById("demo").innerHTML =
+          d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+      }
+    </script>
+  </body>
+</html>
